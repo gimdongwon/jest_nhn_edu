@@ -6,6 +6,8 @@ export function swap(a) {
 	if (a.length !== 2) {
 		return a;
 	} else {
-		return a.unshift(a.pop());
+		let newObj = [ ...a ];
+		newObj.unshift(newObj.pop());
+		return newObj;
 	}
 }

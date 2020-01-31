@@ -23,9 +23,9 @@ describe('swap()', () => {
 		expect(swap(arr1)).toEqual(arr1);
 	});
 
-	// test('배열 내의 두 요소의 순서를 바꾸어 새로운 배열을 반환한다.', () => {
-	// 	expect(swap([ 3, 4 ])).toEqual([ 4, 3 ]);
-	// });
+	test('배열 내의 두 요소의 순서를 바꾸어 새로운 배열을 반환한다.', () => {
+		expect(swap([ 3, 4 ])).toEqual([ 4, 3 ]);
+	});
 
 	test('변경된 배열은 기존 배열과 다른 새로운 배열이다.', () => {
 		const arr = [ 1, 2 ];
