@@ -39,8 +39,8 @@ describe('min 옵션 사용 시 현재값과 min 값이 동일하면', () => {
 	it('dec() 함수를 호출해도 값이 감소하지 않는다.', () => {});
 
 	it('isMin() 호출 시 true를 반환한다.', () => {
-		// const counter = createCounter({ initVal: 10, min: 10 });
-		// expect(counter.isMin()).toBe(true);
+		const counter = createCounter({ initVal: 10, min: 10 });
+		expect(counter.isMin()).toBe(true);
 	});
 });
 
