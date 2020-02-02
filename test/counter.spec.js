@@ -36,16 +36,30 @@ it('initValue 옵션 사용 시 초기값이 해당 값으로 지정된다.', ()
 });
 
 describe('min 옵션 사용 시 현재값과 min 값이 동일하면', () => {
-	it('dec() 함수를 호출해도 값이 감소하지 않는다.', () => {});
+	let counter;
+	beforeEach(() => {
+		counter = createCounter({ initVal: 10, min: 10 });
+	});
+	it('dec() 함수를 호출해도 값이 감소하지 않는다.', () => {
+		expect(counter.dec()).toBe(10);
+	});
 
 	it('isMin() 호출 시 true를 반환한다.', () => {
-		const counter = createCounter({ initVal: 10, min: 10 });
+		// const counter = createCounter({ initVal: 10, min: 10 });
 		expect(counter.isMin()).toBe(true);
 	});
 });
 
 describe('max 옵션 사용 시 현재값과 max 값이 동일하면', () => {
-	it('inc() 함수를 호출해도 값이 증가하지 않는다.', () => {});
+	let counter;
+	beforeEach(() => {
+		counter = createCounter({ initVal: 10, max: 10 });
+	});
+	it('inc() 함수를 호출해도 값이 증가하지 않는다.', () => {
+		expect(counter.inc()).toBe(10);
+	});
 
-	it('isMax() 호출 시 true를 반환한다.', () => {});
+	it('isMax() 호출 시 true를 반환한다.', () => {
+		expect(counter.isMax()).toBe(true);
+	});
 });

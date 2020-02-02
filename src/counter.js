@@ -5,16 +5,16 @@ export function createCounter(options = {}) {
 			return value;
 		},
 		inc() {
-			return value++;
+			return options.max === value ? value : ++value;
 		},
 		dec() {
-			return value--;
+			return options.min === value ? value : --value;
 		},
 		isMax() {
-			return false;
+			return options.max ? true : false;
 		},
 		isMin() {
-			return options === value;
+			return options.min === value;
 		}
 	};
 }
